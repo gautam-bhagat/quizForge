@@ -6,7 +6,12 @@ const port = 4000;
 //Question DB
 const questionStore = require("./store");
 
-app.get("/",  (req, res) => {
+app.get('/',(req,res)=>{
+  res.send("Reelo Coding Assignment : Backend Developer")
+});
+
+
+app.get("/get",  (req, res) => {
 
   let { totalMarks, easy, medium, hard } = req.body;
   let difficultyDistribution = { easy, medium, hard };
